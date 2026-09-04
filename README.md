@@ -24,6 +24,10 @@ export default defineConfig([
   </p>
 
   <p align="center">
+    <img src="public/hero-dark.png" alt="VYRA dark mode hero section" width="100%" />
+  </p>
+
+  <p align="center">
     <strong>Social media. Creative direction. Brand presence.</strong><br />
     A focused portfolio experience for bold ideas and memorable digital identities.
   </p>
