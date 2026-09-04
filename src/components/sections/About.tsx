@@ -47,6 +47,7 @@ export default function About() {
     <section
       id="about"
       className="
+        scroll-reveal
         relative overflow-hidden bg-[#F7F6F2]
         py-16 sm:py-20 lg:py-24
         transition-colors duration-500
@@ -54,14 +55,19 @@ export default function About() {
       "
     >
       <div
-        className="pointer-events-none absolute left-1/2 top-1/2 h-[520px] w-[520px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand-orange/[0.07] blur-[160px] dark:bg-brand-orange/[0.1]"
+        className="pointer-events-none absolute left-1/2 top-1/2 h-[520px] w-[520px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand-orange/[0.09] blur-[160px] dark:bg-brand-orange/[0.1]"
+        aria-hidden="true"
+      />
+
+      <div
+        className="pointer-events-none absolute -right-32 top-24 h-[280px] w-[280px] rounded-full bg-brand-orange/[0.06] blur-[120px] dark:bg-brand-orange/[0.08]"
         aria-hidden="true"
       />
 
       {/* =========================
           SECTION HEADER
       ========================== */}
-      <div className="mx-auto mb-12 max-w-[1440px] px-6 sm:mb-14 sm:px-8 lg:px-12">
+      <div className="scroll-reveal delay-1 mx-auto mb-12 max-w-[1440px] px-6 sm:mb-14 sm:px-8 lg:px-12">
         <div className="flex flex-col gap-7 sm:flex-row sm:items-end sm:justify-between sm:gap-12">
           <div>
             {/* Eyebrow — a hairline rule instead of a tracked-out label */}
@@ -107,7 +113,7 @@ export default function About() {
           INFINITE GALLERY
       ========================== */}
       <div
-        className="group/slider relative w-full overflow-hidden"
+        className="scroll-reveal delay-2 group/slider relative w-full overflow-hidden"
         role="region"
         aria-label="Selected work gallery"
       >

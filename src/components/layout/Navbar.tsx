@@ -12,6 +12,9 @@ export default function Navbar() {
   // # Mobile Menu State
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  // # Scroll State
+  const [isScrolled, setIsScrolled] = useState(false);
+
   // # Theme State
   const [isDark, setIsDark] = useState(true);
 
@@ -26,6 +29,16 @@ export default function Navbar() {
       setIsDark(true);
       document.documentElement.classList.add("dark");
     }
+  }, []);
+
+  // # Track Page Scroll
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 24);
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   // # Toggle Theme
@@ -47,16 +60,20 @@ export default function Navbar() {
   const closeMenu = () => setIsMenuOpen(false);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50">
+    <header className="page-reveal fixed inset-x-0 top-0 z-50">
       {/* ==================================================
           # NAVBAR
       ================================================== */}
       <nav
-        className="
-          mx-auto flex h-[88px] max-w-[1440px] items-center justify-between
-          px-6 transition-colors duration-500
+        className={`
+          mx-auto flex max-w-[1440px] items-center justify-between
+          px-6 transition-all duration-500
           sm:px-8 lg:px-12
-        "
+          ${isScrolled
+            ? "h-[72px] border-b border-black/10 bg-[#FAFAF7]/85 shadow-[0_10px_30px_rgba(17,17,17,0.08)] backdrop-blur-xl dark:border-white/10 dark:bg-black/75"
+            : "h-[88px] bg-transparent"
+          }
+        `}
       >
         {/* ==================================================
             # BRAND
@@ -70,7 +87,9 @@ export default function Navbar() {
           <img
             src="/icon/images.png"
             alt="VYRA"
-            className="h-12 w-12 object-contain transition-transform duration-300 group-hover:rotate-12"
+            className={`object-contain transition-all duration-500 group-hover:rotate-12 ${
+              isScrolled ? "h-10 w-10" : "h-12 w-12"
+            }`}
           />
 
           <span

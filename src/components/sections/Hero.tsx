@@ -391,7 +391,7 @@ export default function Hero() {
       {/* ==================================================
           # HERO CONTENT
       ================================================== */}
-      <div className="relative z-20 mx-auto flex min-h-screen max-w-[1440px] flex-col items-center justify-center px-6 pb-16 pt-[110px] text-center sm:px-8 sm:pt-[120px] lg:px-12">
+      <div className="page-reveal relative z-20 mx-auto flex min-h-screen max-w-[1440px] flex-col items-center justify-center px-6 pb-16 pt-[110px] text-center sm:px-8 sm:pt-[120px] lg:px-12" style={{ animationDelay: "140ms" }}>
 
         {/* ==================================================
             # EYEBROW
