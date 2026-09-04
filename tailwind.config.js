@@ -9,6 +9,9 @@ export default {
 
   theme: {
     extend: {
+      fontFamily: {
+        display: ["Cormorant Garamond", "serif"],
+      },
       colors: {
         brand: {
           orange: "#FF5A36",

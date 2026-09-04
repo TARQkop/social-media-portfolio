@@ -67,26 +67,14 @@ export default function Navbar() {
           className="group relative z-[60] flex items-center gap-3"
           aria-label="VYRA — Home"
         >
-          {/* Logo Icon */}
-          <span
-            className="
-              flex h-10 w-10 items-center justify-center rounded-full
-              bg-brand-orange text-base font-bold text-white
-              shadow-[0_0_20px_rgba(255,120,40,0.18)]
-              transition-transform duration-300
-              group-hover:rotate-12
-            "
-          >
-            V
-          </span>
+          <img
+            src="/icon/images.png"
+            alt="VYRA"
+            className="h-12 w-12 object-contain transition-transform duration-300 group-hover:rotate-12"
+          />
 
-          {/* Brand Name */}
           <span
-            className="
-              text-xl font-bold tracking-tight
-              text-black transition-colors duration-500
-              dark:text-white
-            "
+            className="font-display text-2xl font-bold tracking-wide text-black transition-colors duration-300 group-hover:text-brand-orange dark:text-white dark:group-hover:text-brand-orange"
           >
             VYRA
           </span>
@@ -101,14 +89,27 @@ export default function Navbar() {
               key={link.label}
               href={link.href}
               className="
+                group relative
                 text-[17px] font-medium
                 text-black/55
-                transition-all duration-300
+                transition-colors duration-300
                 hover:text-brand-orange
                 dark:text-white/65
+                dark:hover:text-brand-orange
               "
             >
               {link.label}
+
+              {/* Hover underline */}
+              <span
+                className="
+                  absolute -bottom-2 left-0 h-[2px] w-0
+                  rounded-full
+                  bg-brand-orange
+                  transition-all duration-300
+                  group-hover:w-full
+                "
+              />
             </a>
           ))}
         </div>
@@ -117,7 +118,6 @@ export default function Navbar() {
             # DESKTOP ACTIONS
         ================================================== */}
         <div className="hidden items-center gap-3 md:flex">
-        {/* # Theme Toggle */}
         <button
         type="button"
         onClick={toggleTheme}
@@ -230,9 +230,14 @@ export default function Navbar() {
               hover:border-brand-orange
               hover:bg-brand-orange
               hover:text-white
+              hover:shadow-[0_8px_24px_rgba(255,90,54,0.22)]
               dark:border-white/20
               dark:bg-white/5
               dark:text-white
+              dark:hover:border-brand-orange
+              dark:hover:bg-brand-orange
+              dark:hover:text-white
+              dark:hover:shadow-[0_8px_24px_rgba(255,90,54,0.22)]
             "
             aria-label={
               isDark ? "Switch to light mode" : "Switch to dark mode"

@@ -378,6 +378,16 @@ export default function Hero() {
         />
       </div>
 
+      {/* SOFT BLEND INTO THE NEXT SECTION */}
+      <div
+        className="
+          pointer-events-none absolute inset-x-0 bottom-0 z-10 h-24
+          bg-gradient-to-b from-transparent via-[#F7F6F2]/80 to-[#F7F6F2]
+          dark:via-black/80 dark:to-black
+        "
+        aria-hidden="true"
+      />
+
       {/* ==================================================
           # HERO CONTENT
       ================================================== */}
