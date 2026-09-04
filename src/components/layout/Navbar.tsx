@@ -118,7 +118,7 @@ export default function Navbar() {
           aria-label="VYRA — Home"
         >
           <img
-            src="/icon/images.png"
+            src={`${import.meta.env.BASE_URL}icon/images.png`}
             alt="VYRA"
             className={`object-contain transition-all duration-500 group-hover:rotate-12 ${
               isScrolled ? "h-10 w-10" : "h-12 w-12"

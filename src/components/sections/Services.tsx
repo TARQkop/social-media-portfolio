@@ -72,7 +72,7 @@ export default function Services() {
 								<div className="flex items-center gap-4">
 									<span className="flex h-11 w-11 items-center justify-center rounded-full border border-brand-orange/30 text-brand-orange transition-all duration-700 group-hover:bg-brand-orange group-hover:text-white dark:group-hover:bg-white dark:group-hover:text-brand-orange">
 										<img
-											src={`/svg/${service.icon}`}
+											src={`${import.meta.env.BASE_URL}svg/${service.icon}`}
 											alt=""
 											className="h-5 w-5 dark:[filter:brightness(0)_saturate(100%)_invert(43%)_sepia(96%)_saturate(2484%)_hue-rotate(343deg)_brightness(101%)_contrast(101%)]"
 										/>
