@@ -51,8 +51,11 @@ export default function Contact() {
 								</span>
 								<span className="flex items-center justify-between text-lg font-medium">
 									hello@tariq.dev
-									<span className="text-brand-orange transition-transform group-hover:translate-x-1 group-hover:-translate-y-1">
-										↗
+										<span className="text-brand-orange transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" aria-hidden="true">
+											<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-5 w-5">
+												<path d="M5 19 19 5" />
+												<path d="M8 5h11v11" />
+											</svg>
 									</span>
 								</span>
 							</a>
@@ -165,7 +168,13 @@ export default function Contact() {
 								type="submit"
 								className="inline-flex items-center justify-center gap-3 self-start bg-brand-orange px-6 py-4 text-sm font-bold text-white transition-all hover:bg-brand-text hover:text-white hover:shadow-[0_12px_35px_rgba(255,90,54,0.25)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-orange focus-visible:ring-offset-2 focus-visible:ring-offset-[#F7F6F2] dark:hover:bg-white dark:hover:text-black dark:focus-visible:ring-offset-black"
 							>
-								Send message <span aria-hidden="true">↗</span>
+								Send message
+								<span aria-hidden="true" className="flex h-5 w-5 items-center justify-center">
+									<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-4 w-4">
+										<path d="M5 19 19 5" />
+										<path d="M8 5h11v11" />
+									</svg>
+								</span>
 							</button>
 							{isSubmitted && (
 								<p className="text-sm text-brand-orange" role="status">

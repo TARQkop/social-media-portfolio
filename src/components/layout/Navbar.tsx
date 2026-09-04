@@ -255,8 +255,11 @@ export default function Navbar() {
           >
             Let's Talk
 
-            <span aria-hidden="true" className="text-base">
-              ↗
+            <span aria-hidden="true" className="flex h-5 w-5 items-center justify-center">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-4 w-4">
+                <path d="M5 19 19 5" />
+                <path d="M8 5h11v11" />
+              </svg>
             </span>
           </a>
         </div>
@@ -446,7 +449,10 @@ export default function Navbar() {
                     }
                   `}
                 >
-                  ↗
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-4 w-4" aria-hidden="true">
+                    <path d="M5 19 19 5" />
+                    <path d="M8 5h11v11" />
+                  </svg>
                 </span>
               </a>
             ))}
@@ -470,8 +476,11 @@ export default function Navbar() {
           >
             Let's Talk
 
-            <span aria-hidden="true" className="text-lg">
-              ↗
+            <span aria-hidden="true" className="flex h-5 w-5 items-center justify-center">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-4 w-4">
+                <path d="M5 19 19 5" />
+                <path d="M8 5h11v11" />
+              </svg>
             </span>
           </a>
 

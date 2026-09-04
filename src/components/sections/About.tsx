@@ -264,7 +264,12 @@ export default function About() {
                         group-hover/card:rotate-45
                       "
                     >
-                      <span className="text-lg" aria-hidden="true">↗</span>
+                      <span className="flex h-5 w-5 items-center justify-center" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-4 w-4">
+                          <path d="M5 19 19 5" />
+                          <path d="M8 5h11v11" />
+                        </svg>
+                      </span>
                     </div>
                   </div>
                 </div>
