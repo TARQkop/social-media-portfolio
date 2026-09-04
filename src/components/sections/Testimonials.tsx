@@ -76,9 +76,11 @@ export default function Testimonials() {
 							</blockquote>
 
 							<footer className="flex items-center gap-5">
-								<div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-brand-text text-xs font-bold text-white dark:bg-brand-orange">
-									{activeTestimonial.initials}
-								</div>
+								<img
+									src={activeTestimonial.avatar}
+									alt={activeTestimonial.name}
+									className="h-12 w-12 shrink-0 rounded-full border-2 border-white object-cover shadow-sm dark:border-white/15"
+								/>
 								<div className="space-y-1">
 									<cite className="block text-sm font-bold not-italic text-brand-text dark:text-white">{activeTestimonial.name}</cite>
 									<span className="text-xs text-brand-muted dark:text-white/45">{activeTestimonial.role}, {activeTestimonial.company}</span>
@@ -87,10 +89,6 @@ export default function Testimonials() {
 						</article>
 
 						<div className="flex flex-col justify-between border-t border-brand-border pt-6 dark:border-white/10 lg:w-56 lg:border-l lg:border-t-0 lg:pl-10 lg:pt-0">
-							<p className="max-w-[20ch] text-sm leading-6 text-brand-muted dark:text-white/45">
-								A few words from the people building what comes next.
-							</p>
-
 							<div className="flex items-center justify-between gap-6 lg:justify-end">
 								<div className="flex items-center gap-2" aria-label="Choose testimonial">
 									{testimonials.map((testimonial, index) => (

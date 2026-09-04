@@ -101,18 +101,6 @@ export default function Services() {
 					))}
 				</div>
 
-				<div className="scroll-reveal delay-3 mt-6 flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
-					<p className="text-sm text-brand-muted dark:text-white/35">Built for ambitious brands.</p>
-					<a
-						href="#contact"
-						className="inline-flex w-fit items-center gap-3 border-b border-brand-orange pb-2 text-sm font-semibold text-brand-text transition-colors duration-300 hover:text-brand-orange dark:text-white"
-					>
-						Start a conversation
-						<span aria-hidden="true" className="text-lg">
-							-&gt;
-						</span>
-					</a>
-				</div>
 			</div>
 		</section>
 	);

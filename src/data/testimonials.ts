@@ -6,6 +6,7 @@ export const testimonials = [
 		company: "Luma Studio",
 		role: "Founder",
 		initials: "MH",
+		avatar: "https://i.pravatar.cc/96?img=47",
 	},
 	{
 		quote:
@@ -14,6 +15,7 @@ export const testimonials = [
 		company: "Northline",
 		role: "Marketing Lead",
 		initials: "OK",
+		avatar: "https://i.pravatar.cc/96?img=12",
 	},
 	{
 		quote:
@@ -22,5 +24,6 @@ export const testimonials = [
 		company: "Forma House",
 		role: "Co-founder",
 		initials: "LN",
+		avatar: "https://i.pravatar.cc/96?img=32",
 	},
 ];

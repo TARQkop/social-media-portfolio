@@ -495,18 +495,6 @@ export default function Hero() {
           </a>
         </div>
 
-        {/* ==================================================
-            # BOTTOM META
-        ================================================== */}
-        <div className="absolute bottom-7 left-6 right-6 flex flex-col items-center gap-2 sm:bottom-8 sm:flex-row sm:justify-between sm:text-left lg:left-12 lg:right-12">
-          <span className="text-[9px] font-medium uppercase tracking-[0.18em] text-black/28 sm:text-[10px] dark:text-white/35">
-            Creative Social Media Agency
-          </span>
-
-          <span className="text-[9px] font-medium uppercase tracking-[0.18em] text-black/28 sm:text-[10px] dark:text-white/35">
-            Based in Duhok • Iraq
-          </span>
-        </div>
       </div>
     </section>
   );

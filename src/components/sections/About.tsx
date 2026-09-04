@@ -275,20 +275,6 @@ export default function About() {
       </div>
 
       {/* =========================
-          BOTTOM META
-      ========================== */}
-      <div className="mx-auto mt-5 max-w-[1440px] px-6 sm:px-8 lg:px-12">
-        <div className="flex items-center justify-between border-t border-brand-border pt-6 dark:border-white/10">
-          <span className="text-xs text-brand-muted dark:text-white/40">
-            Creative, Social, Branding
-          </span>
-          <span className="text-xs text-brand-muted dark:text-white/40">
-            Explore selected work
-          </span>
-        </div>
-      </div>
-
-      {/* =========================
           ANIMATION
       ========================== */}
       <style>{`
