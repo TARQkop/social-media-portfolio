@@ -1,36 +1,3 @@
-# React + TypeScript + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  # VYRA
-
-  <p align="center">
-    <img src="public/icon/images.png" alt="VYRA logo" width="120" />
-  </p>
-
-  <p align="center">
-    <img src="public/hero-dark.png" alt="VYRA dark mode hero section" width="100%" />
-  </p>
-
-  <p align="center">
-    <strong>Social media. Creative direction. Brand presence.</strong><br />
-    A focused portfolio experience for bold ideas and memorable digital identities.
-  </p>
 # VYRA
 
 <p align="center">
@@ -38,7 +5,7 @@ export default defineConfig([
 </p>
 
 <p align="center">
-  <img src="public/hero-dark.png" alt="VYRA dark mode hero section" width="100%" />
+  <img src="public/img/image.png" alt="VYRA dark mode hero section" width="100%" />
 </p>
 
 <p align="center">
@@ -105,8 +72,8 @@ src/
   index.css       Global styles and motion
 public/
   icon/           VYRA brand mark
+  img/            Dark mode hero preview
   svg/            Service icons
-  hero-dark.png   Dark-mode hero preview
 ```
 
 ## Theme
