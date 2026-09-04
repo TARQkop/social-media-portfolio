@@ -49,7 +49,7 @@ export default function About() {
       className="
         scroll-reveal
         relative overflow-hidden bg-[#F7F6F2]
-        py-16 sm:py-20 lg:py-24
+        py-12 sm:py-16 lg:py-20
         transition-colors duration-500
         dark:bg-black
       "
@@ -67,7 +67,7 @@ export default function About() {
       {/* =========================
           SECTION HEADER
       ========================== */}
-      <div className="scroll-reveal delay-1 mx-auto mb-12 max-w-[1440px] px-6 sm:mb-14 sm:px-8 lg:px-12">
+      <div className="scroll-reveal delay-1 mx-auto mb-9 max-w-[1440px] px-6 sm:mb-10 sm:px-8 lg:px-12">
         <div className="flex flex-col gap-7 sm:flex-row sm:items-end sm:justify-between sm:gap-12">
           <div>
             {/* Eyebrow — a hairline rule instead of a tracked-out label */}
@@ -277,7 +277,7 @@ export default function About() {
       {/* =========================
           BOTTOM META
       ========================== */}
-      <div className="mx-auto mt-12 max-w-[1440px] px-6 sm:px-8 lg:px-12">
+      <div className="mx-auto mt-5 max-w-[1440px] px-6 sm:px-8 lg:px-12">
         <div className="flex items-center justify-between border-t border-brand-border pt-6 dark:border-white/10">
           <span className="text-xs text-brand-muted dark:text-white/40">
             Creative, Social, Branding

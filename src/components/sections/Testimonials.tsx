@@ -20,13 +20,13 @@ export default function Testimonials() {
 	return (
 		<section
 			id="results"
-			className="relative overflow-hidden bg-[#F7F6F2] px-6 py-20 text-brand-text transition-colors duration-500 sm:px-8 sm:py-24 lg:px-12 lg:py-32 dark:bg-black dark:text-white"
+			className="relative overflow-hidden bg-[#F7F6F2] px-6 py-14 text-brand-text transition-colors duration-500 sm:px-8 sm:py-16 lg:px-12 lg:py-20 dark:bg-black dark:text-white"
 		>
 			<div className="pointer-events-none absolute left-1/2 top-1/2 h-[520px] w-[520px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand-orange/[0.08] blur-[160px] dark:bg-brand-orange/[0.1]" aria-hidden="true" />
 			<div className="pointer-events-none absolute -right-32 top-24 h-[280px] w-[280px] rounded-full bg-brand-orange/[0.06] blur-[120px] dark:bg-brand-orange/[0.08]" aria-hidden="true" />
 
 			<div className="relative mx-auto max-w-[1440px]">
-				<div className="scroll-reveal mb-12 flex flex-col gap-7 sm:mb-14 sm:flex-row sm:items-end sm:justify-between sm:gap-12">
+				<div className="scroll-reveal mb-9 flex flex-col gap-7 sm:mb-10 sm:flex-row sm:items-end sm:justify-between sm:gap-10">
 					<div>
 						<div className="mb-6 flex items-center gap-3">
 							<span className="h-px w-8 bg-brand-orange sm:w-10" />
@@ -36,7 +36,7 @@ export default function Testimonials() {
 						</div>
 
 						<h2 className="max-w-[13ch] text-[clamp(2.8rem,12vw,4.5rem)] font-extrabold leading-[0.92] tracking-[-0.045em] lg:text-7xl">
-							They say it <span className="text-brand-orange">best.</span>
+							The work speaks <span className="text-brand-orange">loudest.</span>
 						</h2>
 					</div>
 
@@ -46,7 +46,7 @@ export default function Testimonials() {
 				</div>
 
 				<div
-					className="scroll-reveal delay-2 border border-brand-border bg-white dark:border-white/10 dark:bg-white/5"
+					className="scroll-reveal delay-2 relative border border-brand-border bg-white shadow-[0_24px_70px_rgba(17,17,17,0.07)] dark:border-white/10 dark:bg-white/5 dark:shadow-none"
 					onMouseEnter={() => setIsPaused(true)}
 					onMouseLeave={() => setIsPaused(false)}
 					onFocus={() => setIsPaused(true)}
@@ -56,6 +56,8 @@ export default function Testimonials() {
 						}
 					}}
 				>
+					<div className="absolute left-0 top-0 h-1 w-24 bg-brand-orange" aria-hidden="true" />
+
 					<div className="grid min-h-[410px] gap-8 p-7 sm:p-10 lg:min-h-[430px] lg:grid-cols-[1fr_auto] lg:gap-16 lg:p-14">
 						<article
 							key={activeTestimonial.name}
@@ -63,7 +65,7 @@ export default function Testimonials() {
 							aria-live="polite"
 						>
 							<div className="flex items-start justify-between">
-								<span className="font-display text-7xl leading-none text-brand-orange">“</span>
+								<span className="font-display text-8xl leading-[0.7] text-brand-orange">“</span>
 								<span className="text-sm font-semibold tracking-[0.18em] text-brand-muted dark:text-white/35">
 									0{activeIndex + 1} / 0{testimonials.length}
 								</span>
@@ -74,7 +76,7 @@ export default function Testimonials() {
 							</blockquote>
 
 							<footer className="flex items-center gap-5">
-								<div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-brand-orange text-xs font-bold text-white">
+								<div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-brand-text text-xs font-bold text-white dark:bg-brand-orange">
 									{activeTestimonial.initials}
 								</div>
 								<div className="space-y-1">
@@ -86,7 +88,7 @@ export default function Testimonials() {
 
 						<div className="flex flex-col justify-between border-t border-brand-border pt-6 dark:border-white/10 lg:w-56 lg:border-l lg:border-t-0 lg:pl-10 lg:pt-0">
 							<p className="max-w-[20ch] text-sm leading-6 text-brand-muted dark:text-white/45">
-								Real words from ambitious brands we have helped move forward.
+								A few words from the people building what comes next.
 							</p>
 
 							<div className="flex items-center justify-between gap-6 lg:justify-end">

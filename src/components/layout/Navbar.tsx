@@ -8,6 +8,39 @@ const navLinks = [
   { label: "Results", href: "#results" },
 ];
 
+const socialLinks = [
+  { label: "Instagram", href: "https://instagram.com/tariq.dev", icon: "instagram" },
+  { label: "Telegram", href: "https://t.me/tariqdev", icon: "telegram" },
+  { label: "WhatsApp", href: "https://wa.me/962000000000", icon: "whatsapp" },
+] as const;
+
+function SocialIcon({ name }: { name: (typeof socialLinks)[number]["icon"] }) {
+  if (name === "instagram") {
+    return (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-4 w-4" aria-hidden="true">
+        <rect x="3" y="3" width="18" height="18" rx="5" />
+        <circle cx="12" cy="12" r="4" />
+        <circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none" />
+      </svg>
+    );
+  }
+
+  if (name === "telegram") {
+    return (
+      <svg viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4" aria-hidden="true">
+        <path d="M21.8 4.3 18.7 19c-.2 1-1 1.3-1.8.8l-4.7-3.5-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.8 8.7-7.9c.4-.3-.1-.5-.6-.2L6.5 12.9 1.9 11.5c-1-.3-1-1 .2-1.5L20 3c.8-.3 1.9.2 1.8 1.3Z" />
+      </svg>
+    );
+  }
+
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-4 w-4" aria-hidden="true">
+      <path d="M20.5 11.5a8.5 8.5 0 0 1-12.6 7.4L3.5 20l1.1-4.2A8.5 8.5 0 1 1 20.5 11.5Z" />
+      <path d="M8.4 8.2c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.7c.1.2.1.4-.1.6l-.5.6c.5 1 1.3 1.8 2.4 2.3l.6-.5c.2-.2.4-.2.6-.1l1.7.7c.3.1.4.3.4.5 0 .3-.1.8-.3 1-.2.3-.7.5-1.1.5-2.5-.1-5.9-3.4-6-6 0-.5.2-1 .4-1.3Z" />
+    </svg>
+  );
+}
+
 export default function Navbar() {
   // # Mobile Menu State
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -60,18 +93,17 @@ export default function Navbar() {
   const closeMenu = () => setIsMenuOpen(false);
 
   return (
-    <header className="page-reveal fixed inset-x-0 top-0 z-50">
+    <header className="fixed inset-x-0 top-0 z-[100]">
       {/* ==================================================
           # NAVBAR
       ================================================== */}
       <nav
-        className={`
-          mx-auto flex max-w-[1440px] items-center justify-between
+        className={`relative z-[110] mx-auto flex max-w-[1440px] items-center justify-between
           px-6 transition-all duration-500
           sm:px-8 lg:px-12
           ${isScrolled
-            ? "h-[72px] border-b border-black/10 bg-[#FAFAF7]/85 shadow-[0_10px_30px_rgba(17,17,17,0.08)] backdrop-blur-xl dark:border-white/10 dark:bg-black/75"
-            : "h-[88px] bg-transparent"
+            ? "h-[72px] rounded-b-2xl border-x border-b border-black/10 bg-white/70 shadow-[0_10px_30px_rgba(17,17,17,0.08)] backdrop-blur-xl dark:border-white/10 dark:bg-black/75"
+            : "h-[88px] border-transparent bg-transparent shadow-none backdrop-blur-0 dark:border-transparent dark:bg-transparent"
           }
         `}
       >
@@ -144,7 +176,7 @@ export default function Navbar() {
             group flex h-11 w-11 items-center justify-center
             rounded-full
             border border-black/10
-            bg-white/70
+            bg-white/55
             text-black/70
             backdrop-blur-sm
             transition-all duration-300
@@ -205,7 +237,6 @@ export default function Navbar() {
             </svg>
         )}
         </button>
-
 
           {/* Let's Talk */}
           <a
@@ -348,8 +379,8 @@ export default function Navbar() {
       ================================================== */}
       <div
         className={`
-          fixed inset-0 z-50
-          transition-all duration-500
+          fixed inset-0 z-[90] border-b border-black/10 dark:border-white/10
+          backdrop-blur-2xl transition-all duration-500
           md:hidden
           ${
             isMenuOpen
@@ -358,8 +389,8 @@ export default function Navbar() {
           }
           ${
             isDark
-              ? "bg-black"
-              : "bg-[#FAFAF7]"
+                ? "bg-black/70"
+                : "bg-[#FAFAF7]/75"
           }
         `}
       >
@@ -442,6 +473,24 @@ export default function Navbar() {
               ↗
             </span>
           </a>
+
+          <div className="mt-6 flex justify-center gap-3">
+            {socialLinks.map((social) => (
+              <a
+                key={social.label}
+                href={social.href}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={social.label}
+                title={social.label}
+                className={`flex h-11 w-11 items-center justify-center rounded-full border ${
+                  isDark ? "border-white/15 text-white/65" : "border-black/10 text-black/60"
+                } transition-colors hover:border-brand-orange hover:bg-brand-orange hover:text-white`}
+              >
+                <SocialIcon name={social.icon} />
+              </a>
+            ))}
+          </div>
 
           {/* Mobile Footer */}
           <p

@@ -5,6 +5,7 @@ const services = [
 		description:
 			"A clear content direction built around your audience, goals, and next stage of growth.",
 		tag: "Direction",
+		icon: "share-2.svg",
 	},
 	{
 		number: "02",
@@ -12,6 +13,7 @@ const services = [
 		description:
 			"Distinctive campaigns and repeatable visual systems that make every post feel unmistakably yours.",
 		tag: "Creation",
+		icon: "layout-grid.svg",
 	},
 	{
 		number: "03",
@@ -19,6 +21,7 @@ const services = [
 		description:
 			"A sharper digital identity that turns attention into trust across every important touchpoint.",
 		tag: "Identity",
+		icon: "eye.svg",
 	},
 ];
 
@@ -26,7 +29,7 @@ export default function Services() {
 	return (
 		<section
 			id="services"
-			className="relative overflow-hidden bg-[#F7F6F2] px-6 py-20 text-brand-text transition-colors duration-500 sm:px-8 sm:py-24 lg:px-12 lg:py-32 dark:bg-black dark:text-white"
+			className="relative overflow-hidden bg-[#F7F6F2] px-6 py-14 text-brand-text transition-colors duration-500 sm:px-8 sm:py-16 lg:px-12 lg:py-20 dark:bg-black dark:text-white"
 		>
 			<div
 				className="pointer-events-none absolute -right-40 top-1/2 h-[420px] w-[420px] -translate-y-1/2 rounded-full bg-brand-orange/[0.09] blur-[140px] dark:bg-brand-orange/[0.12]"
@@ -39,7 +42,7 @@ export default function Services() {
 			/>
 
 			<div className="relative mx-auto max-w-[1440px]">
-				<div className="scroll-reveal mb-14 flex flex-col gap-8 lg:mb-20 lg:flex-row lg:items-end lg:justify-between">
+				<div className="scroll-reveal mb-10 flex flex-col gap-7 lg:mb-14 lg:flex-row lg:items-end lg:justify-between">
 					<div className="max-w-3xl">
 						<div className="mb-6 flex items-center gap-3">
 							<span className="h-px w-10 bg-brand-orange" />
@@ -66,9 +69,18 @@ export default function Services() {
 							className={`scroll-reveal delay-${index + 1} group relative min-h-[320px] bg-white p-7 transition-colors duration-700 hover:bg-brand-orange/[0.08] dark:bg-[#111111] dark:hover:bg-brand-orange dark:duration-1000 sm:p-9 lg:min-h-[390px] lg:p-10`}
 						>
 							<div className="flex items-start justify-between">
-								<span className="font-display text-3xl text-brand-orange transition-colors duration-700 group-hover:text-brand-text dark:group-hover:text-white dark:duration-1000">
-									{service.number}
-								</span>
+								<div className="flex items-center gap-4">
+									<span className="flex h-11 w-11 items-center justify-center rounded-full border border-brand-orange/30 text-brand-orange transition-all duration-700 group-hover:bg-brand-orange group-hover:text-white dark:group-hover:bg-white dark:group-hover:text-brand-orange">
+										<img
+											src={`/svg/${service.icon}`}
+											alt=""
+											className="h-5 w-5 dark:invert"
+										/>
+									</span>
+									<span className="font-display text-3xl text-brand-orange transition-colors duration-700 group-hover:text-brand-text dark:group-hover:text-white dark:duration-1000">
+										{service.number}
+									</span>
+								</div>
 								<span className="rounded-full border border-black/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-brand-muted transition-colors duration-700 group-hover:border-brand-orange group-hover:text-brand-orange dark:border-white/20 dark:text-white/45 dark:group-hover:border-white/50 dark:group-hover:text-white dark:duration-1000">
 									{service.tag}
 								</span>
@@ -89,7 +101,7 @@ export default function Services() {
 					))}
 				</div>
 
-				<div className="scroll-reveal delay-3 mt-10 flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
+				<div className="scroll-reveal delay-3 mt-6 flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
 					<p className="text-sm text-brand-muted dark:text-white/35">Built for ambitious brands.</p>
 					<a
 						href="#contact"
