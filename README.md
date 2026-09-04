@@ -10,12 +10,6 @@
 </p>
 
 <p align="center">
-  <a href="#getting-started">Getting started</a> ·
-  <a href="#customization">Customization</a> ·
-  <a href="#project-structure">Project structure</a>
-</p>
-
-<p align="center">
   <img src="public/img/image.png" alt="VYRA portfolio preview in dark mode" width="100%" />
 </p>
 
