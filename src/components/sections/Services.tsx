@@ -74,7 +74,7 @@ export default function Services() {
 										<img
 											src={`/svg/${service.icon}`}
 											alt=""
-											className="h-5 w-5 dark:invert"
+											className="h-5 w-5 dark:[filter:brightness(0)_saturate(100%)_invert(43%)_sepia(96%)_saturate(2484%)_hue-rotate(343deg)_brightness(101%)_contrast(101%)]"
 										/>
 									</span>
 									<span className="font-display text-3xl text-brand-orange transition-colors duration-700 group-hover:text-brand-text dark:group-hover:text-white dark:duration-1000">

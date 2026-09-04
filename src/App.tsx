@@ -23,7 +23,7 @@ function App() {
         {/* # Hero Section */}
         <Hero />
 
-      {/* # About Section */}
+        {/* # About Section */}
         <About />
 
         {/* # Services Section */}
@@ -34,7 +34,6 @@ function App() {
 
         {/* # Contact Section */}
         <Contact />
-
       </main>
     </>
   );

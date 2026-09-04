@@ -49,17 +49,18 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   // # Theme State
-  const [isDark, setIsDark] = useState(true);
+  const [isDark, setIsDark] = useState(() => {
+    if (typeof window === "undefined") return true;
+    return localStorage.getItem("theme") !== "light";
+  });
 
   // # Load Saved Theme
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
 
     if (savedTheme === "light") {
-      setIsDark(false);
       document.documentElement.classList.remove("dark");
     } else {
-      setIsDark(true);
       document.documentElement.classList.add("dark");
     }
   }, []);

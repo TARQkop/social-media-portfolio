@@ -1,4 +1,4 @@
-import { FormEvent, useState } from "react";
+import { useState, type FormEvent } from "react";
 
 export default function Contact() {
 	const [isSubmitted, setIsSubmitted] = useState(false);
